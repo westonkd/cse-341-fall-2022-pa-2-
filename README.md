@@ -1,4 +1,4 @@
-# CSE 341 Personal Assignment 1
+# CSE 341 Personal Assignment 2
 ## Running the application
 ```
 npm install
