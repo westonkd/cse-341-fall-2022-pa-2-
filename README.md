@@ -10,3 +10,6 @@ npm start
 npm install
 npm run watch
 ```
+
+## Deployed Application
+[https://cse-341-pa-2.onrender.com/](https://cse-341-pa-2.onrender.com/)
