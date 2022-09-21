@@ -1,0 +1,19 @@
+// Local Requests
+// Index
+GET http://localhost:8080/contacts
+###
+GET http://localhost:8080/contacts?firstName=Test
+
+// Show
+###
+GET http://localhost:8080/contacts/6306a1ed71e91a9d8222d412
+
+
+// Deployed Requests
+GET http://localhost:8080/contacts
+###
+GET http://localhost:8080/contacts?firstName=Test
+
+// Show
+###
+GET http://localhost:8080/contacts/6306a1ed71e91a9d8222d412

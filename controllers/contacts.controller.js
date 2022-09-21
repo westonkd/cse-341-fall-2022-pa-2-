@@ -1,11 +1,15 @@
 const getDB = require("../initializers/db");
 const { ObjectId } = require("mongodb");
 
-let contactsCollection;
-
 const index = async (req, res) => {
+  const { firstName } = req.query;
+
+  const filter = Object.fromEntries(
+    Object.entries({ firstName }).filter(([_k, v]) => v)
+  );
+
   const collection = await _collection();
-  const documents = await collection.find({}).toArray();
+  const documents = await collection.find(filter).toArray();
 
   res.json(documents);
 };
@@ -20,12 +24,9 @@ const show = async (req, res) => {
 };
 
 const _collection = async () => {
-  if (contactsCollection) return contactsCollection;
-
   try {
     const db = await getDB();
-    contactsCollection = db.collection("contacts");
-    return contactsCollection;
+    return db.collection("contacts");
   } catch (error) {
     console.error("Error getting contacts collection", error);
   }
