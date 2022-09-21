@@ -7,7 +7,7 @@ let db;
 const initialize = async () => {
   if (db) return db;
   try {
-    console.log(JSON.stringify(dbConfig, null, 4)))
+    console.log(JSON.stringify(dbConfig, null, 4));
 
     const client = new MongoClient(dbConfig.connectionString, {
       useNewUrlParser: true,
